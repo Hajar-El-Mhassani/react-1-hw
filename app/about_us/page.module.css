@@ -3,3 +3,107 @@
   width: 100vw;
   height: 100vh;
 }
+.paragraph {
+  text-align: justify;
+  color: #d3d1d1;
+  word-spacing: 1px;
+}
+
+.cardValue {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(4, 4, 4);
+  padding: 20px;
+  text-align: justify;
+  border-bottom: 1px solid #d3d1d1;
+}
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  column-gap: 10px;
+  /* space between cards */
+  margin-top: 3rem;
+}
+.crewContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 20px; /* space between cards */
+  margin-top: 3rem;
+}
+.cardCrew {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(4, 4, 4);
+  text-align: justify;
+}
+
+.imageCrew {
+  background-color: azure;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.imageCrew img {
+  width: 100%;
+  height: 250px; /* Set your desired fixed height */
+  object-fit: contain; /* Ensures image fills the box without distortion */
+  display: block;
+}
+.contentCrew {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  text-align: justify;
+}
+.partnerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: rgb(4, 4, 4);
+  padding: 20px;
+  text-align: justify;
+}
+.partners {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  place-items: center;
+  row-gap: 40px; /* vertical spacing */
+  column-gap: 60px;
+  margin-top: 3rem;
+  justify-items: center;
+}
+.partners img {
+  width: 60%;
+  height: auto; /* Set your desired fixed height */
+  object-fit: contain; /* Ensures image fills the box without distortion */
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .crewContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
+  .partners {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .crewContainer {
+    grid-template-columns: 1fr;
+  }
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
+  .partners {
+    grid-template-columns: 1fr;
+  }
+}
