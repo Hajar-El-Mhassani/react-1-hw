@@ -1,15 +1,18 @@
-"use client"
+"use client";
 
-import { usePathname } from 'next/navigation';
-import styles from './Footer.module.css';
+import { usePathname } from "next/navigation";
+import styles from "./Footer.module.css";
 
 export const Footer = () => {
-  const path = usePathname().split('?')[0];
+  const path = usePathname().split("?")[0];
   return (
     <footer className={path !== "/" ? styles.footer : styles.hidden}>
       <div className={styles.footerDescription}>
         <h3>Galactica</h3>
-        <p>Explore the universe and beyond. Your journey to the stars starts here.</p>
+        <p>
+          Explore the universe and beyond. Your journey to the stars starts
+          here.
+        </p>
         <p>&copy; 2024 Galactica. All rights reserved.</p>
       </div>
       {/* TASK - React 1 week 2 */}
@@ -29,6 +32,9 @@ export const Footer = () => {
       <div className={styles.footerLinks}>
         <h3>Follow us</h3>
         <ul className={styles.footerList}>
+          <li>
+            <a href="https://linkedin.com">LinkdIn</a>
+          </li>
           <li>
             <a href="https://facebook.com">Facebook</a>
           </li>
@@ -50,4 +56,4 @@ export const Footer = () => {
       </div>
     </footer>
   );
-}
+};

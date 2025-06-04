@@ -23,7 +23,7 @@ const OurValues = () => {
         </div>
         <div className={styles.cardValue}>
           <h2>{values[1]}</h2>
-          <p className={styles.para}>{description2}</p>
+          <p className={styles.paragraph}>{description2}</p>
         </div>
         <div className={styles.cardValue}>
           <h2>{values[2]}</h2>
