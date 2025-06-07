@@ -9,6 +9,13 @@
   word-spacing: 1px;
 }
 
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 10px;
+  /* space between cards */
+  margin-top: 3rem;
+}
 .cardValue {
   display: flex;
   flex-direction: column;
@@ -16,15 +23,9 @@
   background-color: rgb(4, 4, 4);
   padding: 20px;
   text-align: justify;
-  border-bottom: 1px solid #d3d1d1;
+  border: 1px solid #d3d1d1;
 }
-.cardContainer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  column-gap: 10px;
-  /* space between cards */
-  margin-top: 3rem;
-}
+
 .crewContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
@@ -75,7 +76,6 @@
   row-gap: 40px; /* vertical spacing */
   column-gap: 60px;
   margin-top: 3rem;
-  justify-items: center;
 }
 .partners img {
   width: 60%;
