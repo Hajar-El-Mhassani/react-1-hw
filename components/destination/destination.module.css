@@ -53,19 +53,26 @@
   margin: 0 var(--spacing-16);
 }
 .wishlistList {
+  border: 1px solid var(--border-color);
+  width: 80%;
   display: flex;
-  margin: var(--spacing-16) 0;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  padding: 20px;
 }
 
 .addWishlistItem {
   border: 1px solid var(--border-color);
-  width: 200px;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: stretch;
-  margin: var(--spacing-20);
-  padding: var(--spacing-20);
+  margin: 20px auto;
+  padding: 20px;
 }
 
 .addWishlistItem p {
@@ -77,7 +84,7 @@
   font-size: small;
 }
 
-.addWishlistItem input, 
+.addWishlistItem input,
 .addWishlistItem select {
   height: 30px;
   margin-block-end: var(--spacing-20);
