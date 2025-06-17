@@ -3,10 +3,61 @@
   width: 100vw;
   height: 100vh;
 }
+.nasaPicOfTheDay {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: rgb(28 34 46);
 
+  padding: 20px;
+  text-align: justify;
+  border: 1px solid hsl(0, 0%, 97%);
+  margin-top: 2rem;
+}
+.nasaPicOfTheDayContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Two equal columns */
+  gap: 30px; /* optional spacing between content and image */
+  align-items: stretch;
+}
+.nasaPicOfTheDay p {
+  text-align: justify;
+  color: #d3d1d1;
+  word-spacing: 1px;
+}
 
 .nasaPicOfTheDayImg {
-  width: auto;
-  height: 400px;
+  width: 100%;
+  height: 250px;
+}
+.nasaPicOfTheDayImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* or use 'contain' depending on effect */
+  display: block;
+}
+.roverPhotosContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
+.roverPhotoCard {
+  background-color: #111;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  color: white;
+}
+
+.roverPhotoImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .nasaPicOfTheDayContainer {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
 }
