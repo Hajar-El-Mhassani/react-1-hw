@@ -16,10 +16,8 @@ const NASA_URLs = {
 export const NasaCollaboration = () => {
   const [dailyImg, setDailyImg] = useState({});
   const [roverPhoto, setRoverPhoto] = useState({});
-  const hasFetched = useRef(false);
+
   useEffect(() => {
-    if (hasFetched.current) return;
-    hasFetched.current = true;
     const fetchRoverPhotos = async () => {
       const roverPhotoResponse = await fetch(NASA_URLs.marsRoverPhoto).then(
         (response) => response.json()
