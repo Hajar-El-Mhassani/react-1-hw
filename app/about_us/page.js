@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import OurValues from "./components/Ourvalues";
+import OurValues from "./components/OurValues";
 import OurCrew from "./components/OurCrew";
 import OurPartners from "./components/OurPartners";
 // TASK - React 1 week 1

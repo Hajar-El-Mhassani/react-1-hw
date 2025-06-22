@@ -89,3 +89,11 @@
   height: 30px;
   margin-block-end: var(--spacing-20);
 }
+.error {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-08);
+  margin-block-end: var(--spacing-20);
+  align-items: center;
+  color: red;
+}

@@ -7,9 +7,11 @@ import { AddWishlistItem } from "@/components/destination/AddWishlistItem";
 import PlanetWishlistItem from "./components/PlanetWishlistItem";
 import PlanetCard from "./components/PlanetCard";
 import { planets } from "./planetsArray";
+import WishListStatus from "./components/WishlistStatus";
 
 export const Destinations = () => {
   const [selectedPlanets, onAddPlanet] = useState([]);
+  const [error, setError] = useState("");
 
   let isPlanetSelected = false;
   let numberOfPlanets = selectedPlanets.length;
@@ -29,10 +31,11 @@ export const Destinations = () => {
   const addToWishlist = (name, thumbnail) => {
     const isAlreadyInWishlist = selectedPlanets.some((p) => p.name === name);
     if (isAlreadyInWishlist) {
-      alert(`${name} is already in your wishlist!`);
+      setError(`${name} is already in your wishlist!`);
       return;
     }
     onAddPlanet((prevSelected) => [...prevSelected, { name, thumbnail }]);
+    setError(""); // clear error on successful add
   };
 
   const removeFromWishlist = (name) => {
@@ -47,14 +50,14 @@ export const Destinations = () => {
         <h1>Travel destinations</h1>
         <section className="card">
           <h2>Wishlist</h2>
-          {numberOfPlanets > 0 ? (
-            <p>You have {numberOfPlanets} planets in your wishlist</p>
-          ) : (
-            <p>No planets in wishlist</p>
-          )}
+          <WishListStatus count={numberOfPlanets} />
 
           <AddWishlistItem onAddWishlistItem={addToWishlist} />
-
+          {error && (
+            <div className={styles.error}>
+              {error} <button onClick={() => setError("")}>Dismiss</button>
+            </div>
+          )}
           <h3>Your current wishlist</h3>
           <div
             className={`${
